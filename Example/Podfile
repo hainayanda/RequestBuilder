@@ -1,7 +1,14 @@
 use_frameworks!
-target 'RequestBuilder_Tests' do
+
+platform :ios, '13.0'
+
+target 'RequestBuilder_Example' do
   pod 'RequestBuilder', :path => '../'
-  
-  pod 'Quick', '~> 2.2.0'
-    pod 'Nimble', '~> 10.0.0'
+
+  target 'RequestBuilder_Tests' do
+    inherit! :search_paths
+
+    pod 'Quick', '~> 6.1.0'
+    pod 'Nimble', '~> 11.2.1'
+  end
 end

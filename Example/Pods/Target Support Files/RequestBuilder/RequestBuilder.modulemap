@@ -1,0 +1,6 @@
+framework module RequestBuilder {
+  umbrella header "RequestBuilder-umbrella.h"
+
+  export *
+  module * { export * }
+}
