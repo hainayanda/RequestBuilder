@@ -9,6 +9,7 @@ import Foundation
 
 public enum URLRequestBuilderError: Error {
     case stringEncodeFail(String, String.Encoding)
+    case jsonEncodeFail(Encodable, Error)
 }
 
 public enum URLRequestResponseError: Error {

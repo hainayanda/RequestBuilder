@@ -86,12 +86,6 @@ public extension BareHTTPURLRequestBuilding {
     func httpJSONBody(array: [Any]) throws -> PayloadedBuilder {
         contentType(.application(.json)).httpBody(try JSONSerialization.data(withJSONObject: array))
     }
-    
-    func multipartFormBody(_ multipartFormData: MultipartFormData) -> PayloadedBuilder {
-        let contentType = HTTPContentType.multipart(.formData)
-        return addHeaders(value: "\(contentType.stringRepresentation); boundary=\(multipartFormData.boundary)", forField: "Content-Type")
-            .httpBody(multipartFormData.formData)
-    }
 }
 
 // MARK: HTTPURLRequestBuilding Protocol

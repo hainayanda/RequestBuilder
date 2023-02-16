@@ -12,27 +12,27 @@ public extension URL {
         .init(request: URLRequest(url: self))
     }
     
-    func httpRequest(_ method: HTTPRequestMethod) -> HTTPURLRequestBuilder {
+    func httpRequest(_ method: HTTPRequestMethod) -> BareHTTPURLRequestBuilder {
         request().httpMethod(method)
     }
     
-    func httpGet() -> HTTPURLRequestBuilder {
+    func httpGet() -> BareHTTPURLRequestBuilder {
         httpRequest(.get)
     }
     
-    func httpPost() -> HTTPURLRequestBuilder {
+    func httpPost() -> BareHTTPURLRequestBuilder {
         httpRequest(.post)
     }
     
-    func httpPut() -> HTTPURLRequestBuilder {
+    func httpPut() -> BareHTTPURLRequestBuilder {
         httpRequest(.put)
     }
     
-    func httpDelete() -> HTTPURLRequestBuilder {
+    func httpDelete() -> BareHTTPURLRequestBuilder {
         httpRequest(.delete)
     }
     
-    func httpPatch() -> HTTPURLRequestBuilder {
+    func httpPatch() -> BareHTTPURLRequestBuilder {
         httpRequest(.patch)
     }
 }
